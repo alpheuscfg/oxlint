@@ -1,0 +1,19 @@
+packages:
+    - ./package
+
+catalogs:
+    dev:
+        "oxlint": 1.56.0
+    peer:
+        "oxlint": ^1.56.0
+
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+    - "@apst/biome"
+    - "@apst/tsconfig"
+    - "@apst/tsdown"
+    - "@rolldown/*"
+    - "rolldown"
+    - "@tsdown/*"
+    - "tsdown"
