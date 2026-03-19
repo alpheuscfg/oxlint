@@ -1,6 +1,6 @@
 import type { OxlintConfig } from "oxlint";
 
-type LintPluginOptionsSchemas = Required<Required<OxlintConfig>["plugins"]>;
+type LintPlugins = Required<Required<OxlintConfig>["plugins"]>;
 
 const PLUGINS_DEFAULT = [
     "eslint",
@@ -16,7 +16,7 @@ const PLUGINS_DEFAULT = [
     "node",
     "promise",
     "vitest",
-] as const satisfies LintPluginOptionsSchemas;
+] as const satisfies LintPlugins;
 
-export type { LintPluginOptionsSchemas };
+export type { LintPlugins };
 export { PLUGINS_DEFAULT };

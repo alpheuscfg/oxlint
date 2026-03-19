@@ -5,6 +5,23 @@ import { mergeWith } from "es-toolkit";
 import { IGNORE_PATTERNS_DEFAULT } from "#/consts/ignore-patterns";
 import { PLUGINS_DEFAULT } from "#/consts/plugins";
 
+const mergeConfig = (
+    configDefault: OxlintConfig,
+    config?: OxlintConfig,
+): OxlintConfig => {
+    if (!config) return configDefault;
+
+    return mergeWith(
+        configDefault,
+        config,
+        // array replacement
+        (_: unknown, target: unknown): unknown => {
+            if (Array.isArray(target)) return target;
+            return void 0;
+        },
+    );
+};
+
 /**
  * Create an Oxlint configuration.
  *
@@ -22,17 +39,7 @@ const createConfig = (config?: OxlintConfig): OxlintConfig => {
         plugins: PLUGINS_DEFAULT,
     };
 
-    if (!config) return configDefault;
-
-    return mergeWith(
-        configDefault,
-        config,
-        // array replacement
-        (_: unknown, target: unknown): unknown => {
-            if (Array.isArray(target)) return target;
-            return void 0;
-        },
-    );
+    return mergeConfig(configDefault, config);
 };
 
 export { createConfig };
