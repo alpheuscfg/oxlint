@@ -1,7 +1,8 @@
 export type {
     ConfigPluginsOptions,
     CreateConfigOptions,
-} from "#/@types/options";
+} from "#/@types/create";
+export type { WithConfigOptions } from "#/@types/with";
 
 export { createConfig } from "#/functions/create";
 export { withConfig } from "#/functions/with";

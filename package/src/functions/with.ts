@@ -1,5 +1,7 @@
 import type { OxlintConfig } from "oxlint";
 
+import type { WithConfigOptions } from "#/@types/with";
+
 import { mergeWith } from "es-toolkit";
 
 import { createConfig } from "#/functions/create";
@@ -40,8 +42,9 @@ const mergeConfig = (
  * });
  * ```
  */
-const withConfig = (config?: OxlintConfig): OxlintConfig => {
-    return mergeConfig(createConfig(), config);
+const withConfig = (config?: WithConfigOptions): OxlintConfig => {
+    const { configOptions, ...cfg } = config ?? {};
+    return mergeConfig(createConfig(configOptions), cfg);
 };
 
 export { withConfig };

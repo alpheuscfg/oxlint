@@ -1,6 +1,6 @@
 import type { OxlintConfig } from "oxlint";
 
-import type { CreateConfigOptions } from "#/@types/options";
+import type { CreateConfigOptions } from "#/@types/create";
 
 import { IGNORE_PATTERNS_DEFAULT } from "#/consts/ignore-patterns";
 import {

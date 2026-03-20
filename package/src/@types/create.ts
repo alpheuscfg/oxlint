@@ -19,6 +19,9 @@ type CompleteConfigPluginsOptions = {
     vitest: boolean;
 };
 
+/**
+ * Options for the plugins to enable.
+ */
 type ConfigPluginsOptions = Format<Partial<CompleteConfigPluginsOptions>>;
 
 type CompleteCreateConfigOptions = {
@@ -33,7 +36,7 @@ type CompleteCreateConfigOptions = {
 };
 
 /**
- * Options for creating an Oxlint configuration.
+ * Options for the `createConfig` function.
  */
 type CreateConfigOptions = Format<
     Partial<Omit<CompleteCreateConfigOptions, "plugins">> &
