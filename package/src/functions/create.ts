@@ -44,10 +44,10 @@ import {
  * });
  * ```
  */
-const createConfig = (configOptions?: CreateConfigOptions): OxlintConfig => {
+const createConfig = (options?: CreateConfigOptions): OxlintConfig => {
     return {
         ignorePatterns: IGNORE_PATTERNS_DEFAULT,
-        ...(configOptions?.typed && {
+        ...(options?.typed && {
             options: {
                 typeAware: true,
                 typeCheck: true,
@@ -55,10 +55,10 @@ const createConfig = (configOptions?: CreateConfigOptions): OxlintConfig => {
         }),
         plugins: [
             ...PLUGINS_DEFAULT,
-            ...(configOptions?.plugins?.node ? PLUGINS_NODE : []),
-            ...(configOptions?.plugins?.react ? PLUGINS_REACT : []),
-            ...(configOptions?.plugins?.next ? PLUGINS_NEXT : []),
-            ...(configOptions?.plugins?.vitest ? PLUGINS_VITEST : []),
+            ...(options?.plugins?.node ? PLUGINS_NODE : []),
+            ...(options?.plugins?.react ? PLUGINS_REACT : []),
+            ...(options?.plugins?.next ? PLUGINS_NEXT : []),
+            ...(options?.plugins?.vitest ? PLUGINS_VITEST : []),
         ],
     };
 };
