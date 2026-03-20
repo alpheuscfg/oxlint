@@ -6,17 +6,38 @@ const PLUGINS_DEFAULT = [
     "eslint",
     "typescript",
     "unicorn",
-    "react",
-    "react-perf",
-    "nextjs",
     "oxc",
     "import",
     "jsdoc",
-    "jsx-a11y",
+] as const satisfies LintPlugins;
+
+const PLUGINS_NODE = [
     "node",
     "promise",
+] as const satisfies LintPlugins;
+
+const PLUGINS_REACT = [
+    "react",
+    "react-perf",
+    "jsx-a11y",
+] as const satisfies LintPlugins;
+
+const PLUGINS_NEXT = [
+    "react",
+    "react-perf",
+    "jsx-a11y",
+    "nextjs",
+] as const satisfies LintPlugins;
+
+const PLUGINS_VITEST = [
     "vitest",
 ] as const satisfies LintPlugins;
 
 export type { LintPlugins };
-export { PLUGINS_DEFAULT };
+export {
+    PLUGINS_DEFAULT,
+    PLUGINS_NEXT,
+    PLUGINS_NODE,
+    PLUGINS_REACT,
+    PLUGINS_VITEST,
+};
