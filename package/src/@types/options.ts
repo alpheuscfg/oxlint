@@ -1,4 +1,3 @@
-import type { OxlintConfig } from "oxlint";
 import type { Format, Omit, Partial } from "ts-vista";
 
 type CompleteConfigPluginsOptions = {
@@ -12,8 +11,6 @@ type CompleteConfigPluginsOptions = {
     react: boolean;
     /**
      * Whether to enable nextjs plugins.
-     *
-     * All react plugins will be included in addition to the nextjs plugins.
      */
     next: boolean;
     /**
@@ -24,7 +21,7 @@ type CompleteConfigPluginsOptions = {
 
 type ConfigPluginsOptions = Format<Partial<CompleteConfigPluginsOptions>>;
 
-type CompleteConfigOptions = {
+type CompleteCreateConfigOptions = {
     /**
      * Whether to enable type checking.
      */
@@ -35,8 +32,11 @@ type CompleteConfigOptions = {
     plugins: CompleteConfigPluginsOptions;
 };
 
-type ConfigOptions = Format<
-    Partial<Omit<CompleteConfigOptions, "plugins">> &
+/**
+ * Options for creating an Oxlint configuration.
+ */
+type CreateConfigOptions = Format<
+    Partial<Omit<CompleteCreateConfigOptions, "plugins">> &
         Partial<{
             /**
              * Plugins to enable.
@@ -45,17 +45,9 @@ type ConfigOptions = Format<
         }>
 >;
 
-type CreateConfigOptions = OxlintConfig & {
-    /**
-     * Configuration options.
-     */
-    configOptions?: ConfigOptions;
-};
-
 export type {
-    CompleteConfigOptions,
     CompleteConfigPluginsOptions,
-    ConfigOptions,
+    CompleteCreateConfigOptions,
     ConfigPluginsOptions,
     CreateConfigOptions,
 };

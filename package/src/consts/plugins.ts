@@ -23,9 +23,6 @@ const PLUGINS_REACT = [
 ] as const satisfies LintPlugins;
 
 const PLUGINS_NEXT = [
-    "react",
-    "react-perf",
-    "jsx-a11y",
     "nextjs",
 ] as const satisfies LintPlugins;
 

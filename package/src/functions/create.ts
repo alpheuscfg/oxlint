@@ -2,8 +2,6 @@ import type { OxlintConfig } from "oxlint";
 
 import type { CreateConfigOptions } from "#/@types/options";
 
-import { mergeWith } from "es-toolkit";
-
 import { IGNORE_PATTERNS_DEFAULT } from "#/consts/ignore-patterns";
 import {
     PLUGINS_DEFAULT,
@@ -13,29 +11,8 @@ import {
     PLUGINS_VITEST,
 } from "#/consts/plugins";
 
-const mergeConfig = (
-    configDefault: OxlintConfig,
-    config?: OxlintConfig,
-): OxlintConfig => {
-    if (!config) return configDefault;
-
-    return mergeWith(
-        configDefault,
-        config,
-        // array replacement
-        (_: unknown, target: unknown): unknown => {
-            if (Array.isArray(target)) return target;
-            return void 0;
-        },
-    );
-};
-
 /**
  * Create an Oxlint configuration.
- *
- * All arrays will not be merged, adding new values will replace existing values.
- *
- * For extending the existing arrays, consider import them from `@apst/oxlint/consts`.
  *
  * ### Example
  *
@@ -45,12 +22,10 @@ const mergeConfig = (
  * import { createConfig } from "@apst/oxlint";
  *
  * export default createConfig({
- *     configOptions: {
- *         typed: true,
- *         plugins: {
- *             react: true,
- *             vitest: true,
- *         },
+ *     typed: true,
+ *     plugins: {
+ *         react: true,
+ *         vitest: true,
  *     },
  * });
  * ```
@@ -61,20 +36,16 @@ const mergeConfig = (
  * import { createConfig } from "@apst/oxlint";
  *
  * export default createConfig({
- *     configOptions: {
- *         typed: true,
- *         plugins: {
- *             node: true,
- *             vitest: true,
- *         },
+ *     typed: true,
+ *     plugins: {
+ *         node: true,
+ *         vitest: true,
  *     },
  * });
  * ```
  */
-const createConfig = (config?: CreateConfigOptions): OxlintConfig => {
-    const { configOptions, ...cfg } = config || {};
-
-    const configDefault: OxlintConfig = {
+const createConfig = (configOptions?: CreateConfigOptions): OxlintConfig => {
+    return {
         ignorePatterns: IGNORE_PATTERNS_DEFAULT,
         ...(configOptions?.typed && {
             options: {
@@ -90,8 +61,6 @@ const createConfig = (config?: CreateConfigOptions): OxlintConfig => {
             ...(configOptions?.plugins?.vitest ? PLUGINS_VITEST : []),
         ],
     };
-
-    return mergeConfig(configDefault, cfg);
 };
 
 export { createConfig };
