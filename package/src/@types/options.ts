@@ -22,7 +22,7 @@ type CompleteConfigPluginsOptions = {
     vitest: boolean;
 };
 
-type ConfigPluginsOptions = Partial<CompleteConfigPluginsOptions>;
+type ConfigPluginsOptions = Format<Partial<CompleteConfigPluginsOptions>>;
 
 type CompleteConfigOptions = {
     /**
