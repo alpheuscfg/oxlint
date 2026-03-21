@@ -2,6 +2,7 @@
     "private": true,
     "dependencies": {
         "@apst/oxlint": "workspace:*",
+        "oxlint": "catalog:dev",
         "vitest": "^4.1.0"
     },
     "devDependencies": {

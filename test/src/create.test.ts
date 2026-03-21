@@ -1,3 +1,5 @@
+import type { OxlintConfig } from "oxlint";
+
 import { createConfig } from "@apst/oxlint";
 import {
     IGNORE_PATTERNS_DEFAULT,
@@ -16,9 +18,9 @@ import {
 } from "@apst/oxlint/consts";
 import { describe, expect, it } from "vitest";
 
-describe("createConfig", () => {
-    it("creates the base config by default", () => {
-        const config = createConfig();
+describe("createConfig test", (): void => {
+    it("should creates the base config by default", (): void => {
+        const config: OxlintConfig = createConfig();
 
         expect(config.ignorePatterns).toEqual(IGNORE_PATTERNS_DEFAULT);
         expect(config).not.toHaveProperty("options");
@@ -32,8 +34,8 @@ describe("createConfig", () => {
         });
     });
 
-    it("enables type-aware options when typed is true", () => {
-        const config = createConfig({
+    it("should enables type-aware options when typed is true", (): void => {
+        const config: OxlintConfig = createConfig({
             typed: true,
         });
 
@@ -43,8 +45,8 @@ describe("createConfig", () => {
         });
     });
 
-    it("adds node plugins and rules when requested", () => {
-        const config = createConfig({
+    it("should adds node plugins and rules when requested", (): void => {
+        const config: OxlintConfig = createConfig({
             plugins: {
                 node: true,
             },
@@ -64,8 +66,8 @@ describe("createConfig", () => {
         });
     });
 
-    it("treats next as a superset of react and supports vitest", () => {
-        const config = createConfig({
+    it("should treats next as a superset of react and supports vitest", (): void => {
+        const config: OxlintConfig = createConfig({
             plugins: {
                 next: true,
                 vitest: true,

@@ -1,13 +1,15 @@
+import type { OxlintConfig } from "oxlint";
+
 import { createConfig, withConfig } from "@apst/oxlint";
 import { describe, expect, it } from "vitest";
 
-describe("withConfig", () => {
-    it("returns the default config when no overrides are provided", () => {
+describe("withConfig test", (): void => {
+    it("should returns the default config when no overrides are provided", (): void => {
         expect(withConfig()).toEqual(createConfig());
     });
 
-    it("applies configOptions before merging overrides", () => {
-        const config = withConfig({
+    it("should applies configOptions before merging overrides", (): void => {
+        const config: OxlintConfig = withConfig({
             configOptions: {
                 typed: true,
                 plugins: {
@@ -28,8 +30,8 @@ describe("withConfig", () => {
         );
     });
 
-    it("replaces arrays instead of merging them", () => {
-        const config = withConfig({
+    it("should replaces arrays instead of merging them", (): void => {
+        const config: OxlintConfig = withConfig({
             configOptions: {
                 plugins: {
                     react: true,
