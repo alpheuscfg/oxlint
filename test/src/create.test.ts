@@ -23,7 +23,7 @@ describe("createConfig test", (): void => {
         const config: OxlintConfig = createConfig();
 
         expect(config.ignorePatterns).toEqual(IGNORE_PATTERNS_DEFAULT);
-        
+
         expect(config).not.toHaveProperty("options");
 
         expect(config.plugins).toEqual(PLUGINS_DEFAULT);
