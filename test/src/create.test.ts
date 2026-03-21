@@ -23,8 +23,11 @@ describe("createConfig test", (): void => {
         const config: OxlintConfig = createConfig();
 
         expect(config.ignorePatterns).toEqual(IGNORE_PATTERNS_DEFAULT);
+        
         expect(config).not.toHaveProperty("options");
+
         expect(config.plugins).toEqual(PLUGINS_DEFAULT);
+
         expect(config.rules).toEqual({
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,
@@ -56,6 +59,7 @@ describe("createConfig test", (): void => {
             ...PLUGINS_DEFAULT,
             ...PLUGINS_NODE,
         ]);
+
         expect(config.rules).toEqual({
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,
@@ -80,6 +84,7 @@ describe("createConfig test", (): void => {
             ...PLUGINS_NEXT,
             ...PLUGINS_VITEST,
         ]);
+
         expect(config.rules).toEqual({
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,

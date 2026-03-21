@@ -60,11 +60,14 @@ describe("withConfig test", (): void => {
         expect(config.plugins).toEqual([
             "eslint",
         ]);
+
         if (typeof config.rules !== "object") {
             expect(config.rules).toBeDefined();
         } else {
             expect(config.rules["no-console"]).toBe("warn");
+            
             expect(config.rules["react/rules-of-hooks"]).toBe("error");
+
             expect(config.rules["react/jsx-key"]).toEqual([
                 "warn",
                 {
