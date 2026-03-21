@@ -10,6 +10,13 @@ import {
     PLUGINS_REACT,
     PLUGINS_VITEST,
 } from "#/consts/plugins";
+import { RULES_ESLINT } from "#/consts/rules/eslint";
+import { RULES_IMPORT } from "#/consts/rules/import";
+import { RULES_NODE } from "#/consts/rules/node";
+import { RULES_OXC } from "#/consts/rules/oxc";
+import { RULES_REACT } from "#/consts/rules/react";
+import { RULES_TYPESCRIPT } from "#/consts/rules/typescript";
+import { RULES_UNICORN } from "#/consts/rules/unicorn";
 
 /**
  * Create an Oxlint configuration.
@@ -45,9 +52,16 @@ import {
  * ```
  */
 const createConfig = (options?: CreateConfigOptions): OxlintConfig => {
+    const hvTyped: boolean = options?.typed ?? false;
+    const hvNode: boolean = options?.plugins?.node ?? false;
+    const hvReact: boolean =
+        options?.plugins?.next ?? options?.plugins?.react ?? false;
+    const hvNext: boolean = options?.plugins?.next ?? false;
+    const hvVitest: boolean = options?.plugins?.vitest ?? false;
+
     return {
         ignorePatterns: IGNORE_PATTERNS_DEFAULT,
-        ...(options?.typed && {
+        ...(hvTyped && {
             options: {
                 typeAware: true,
                 typeCheck: true,
@@ -55,11 +69,20 @@ const createConfig = (options?: CreateConfigOptions): OxlintConfig => {
         }),
         plugins: [
             ...PLUGINS_DEFAULT,
-            ...(options?.plugins?.node ? PLUGINS_NODE : []),
-            ...(options?.plugins?.react ? PLUGINS_REACT : []),
-            ...(options?.plugins?.next ? PLUGINS_NEXT : []),
-            ...(options?.plugins?.vitest ? PLUGINS_VITEST : []),
+            ...(hvNode ? PLUGINS_NODE : []),
+            ...(hvReact ? PLUGINS_REACT : []),
+            ...(hvNext ? PLUGINS_NEXT : []),
+            ...(hvVitest ? PLUGINS_VITEST : []),
         ],
+        rules: {
+            ...RULES_ESLINT,
+            ...RULES_TYPESCRIPT,
+            ...RULES_UNICORN,
+            ...RULES_OXC,
+            ...RULES_IMPORT,
+            ...(hvNode ? RULES_NODE : {}),
+            ...(hvReact ? RULES_REACT : {}),
+        },
     };
 };
 

@@ -8,12 +8,11 @@ const PLUGINS_DEFAULT = [
     "unicorn",
     "oxc",
     "import",
-    "jsdoc",
+    "promise",
 ] as const satisfies LintPlugins;
 
 const PLUGINS_NODE = [
     "node",
-    "promise",
 ] as const satisfies LintPlugins;
 
 const PLUGINS_REACT = [
