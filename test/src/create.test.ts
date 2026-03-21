@@ -9,6 +9,7 @@ import {
     RULES_ESLINT,
     RULES_IMPORT,
     RULES_NODE,
+    RULES_OXC,
     RULES_REACT,
     RULES_TYPESCRIPT,
     RULES_UNICORN,
@@ -26,6 +27,7 @@ describe("createConfig", () => {
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,
             ...RULES_UNICORN,
+            ...RULES_OXC,
             ...RULES_IMPORT,
         });
     });
@@ -56,6 +58,7 @@ describe("createConfig", () => {
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,
             ...RULES_UNICORN,
+            ...RULES_OXC,
             ...RULES_IMPORT,
             ...RULES_NODE,
         });
@@ -79,6 +82,7 @@ describe("createConfig", () => {
             ...RULES_ESLINT,
             ...RULES_TYPESCRIPT,
             ...RULES_UNICORN,
+            ...RULES_OXC,
             ...RULES_IMPORT,
             ...RULES_REACT,
         });

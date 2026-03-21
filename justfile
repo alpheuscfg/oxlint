@@ -11,7 +11,7 @@ publish := "pnpm publish --access public"
 
 pkg := "package"
 
-tst := "tests"
+tst := "test"
 
 # Default action
 _:
@@ -121,4 +121,3 @@ clean-all-windows:
 # Clean everything
 clean-all:
     just clean-all-{{os()}}
-
