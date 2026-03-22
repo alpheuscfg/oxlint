@@ -2,24 +2,56 @@
 
 A shareable Oxlint configuration.
 
-Implement the configuration into `oxlint.config.ts`:
+## Installation
 
-```ts
-import { createConfig } from "@apst/oxlint";
+Install this package as a dependency in the project:
 
-export default createConfig();
+```sh
+# npm
+npm i @apst/oxlint
+
+# Yarn
+yarn add @apst/oxlint
+
+# pnpm
+pnpm add @apst/oxlint
+
+# Bun
+bun add @apst/oxlint
 ```
 
-For extending the configuration, use `withConfig`:
+## Usage
+
+Implement the preset into `oxlint.config.ts`:
 
 ```ts
-import { withConfig } from "@apst/oxlint";
+import { defineConfig } from "@apst/oxlint";
+import { commonPreset } from "@apst/oxlint/presets/common";
+import { reactPreset } from "@apst/oxlint/presets/react";
 
-export default withConfig({
-    rules: {
-        "no-console": "warn",
-    },
-});
+export default defineConfig([
+    commonPreset(),
+    reactPreset(),
+]);
+```
+
+It is possible to override the default configuration by passing an object to the `defineConfig` function:
+
+```ts
+import { defineConfig } from "@apst/oxlint";
+import { IGNORE_PATTERNS_DEFAULT } from "@apst/oxlint/constants/ignore-patterns";
+import { commonPreset } from "@apst/oxlint/presets/common";
+import { reactPreset } from "@apst/oxlint/presets/react";
+
+export default defineConfig({
+    ignorePatterns: [
+        ...IGNORE_PATTERNS_DEFAULT,
+        // ...
+    ],
+}, [
+    commonPreset(),
+    reactPreset(),
+]);
 ```
 
 ## License

@@ -1,11 +1,5 @@
-export { IGNORE_PATTERNS_DEFAULT } from "#/consts/ignore-patterns";
-export {
-    PLUGINS_DEFAULT,
-    PLUGINS_NEXT,
-    PLUGINS_NODE,
-    PLUGINS_REACT,
-    PLUGINS_VITEST,
-} from "#/consts/plugins";
+export { PLUGIN_COMMON } from "#/presets/common/plugin";
+export { commonPreset } from "#/presets/common/preset";
 export {
     RULES_ESLINT,
     RULES_ESLINT_NURSERY,
@@ -14,7 +8,7 @@ export {
     RULES_ESLINT_RESTRICTION,
     RULES_ESLINT_STYLE,
     RULES_ESLINT_SUSPICIOUS,
-} from "#/consts/rules/eslint";
+} from "#/presets/common/rules/eslint";
 export {
     RULES_IMPORT,
     RULES_IMPORT_CORRECTNESS,
@@ -22,26 +16,12 @@ export {
     RULES_IMPORT_RESTRICTION,
     RULES_IMPORT_STYLE,
     RULES_IMPORT_SUSPICIOUS,
-} from "#/consts/rules/import";
-export {
-    RULES_NODE,
-    RULES_NODE_RESTRICTION,
-    RULES_NODE_STYLE,
-} from "#/consts/rules/node";
+} from "#/presets/common/rules/import";
 export {
     RULES_OXC,
     RULES_OXC_NURSERY,
     RULES_OXC_RESTRICTION,
-} from "#/consts/rules/oxc";
-export {
-    RULES_REACT,
-    RULES_REACT_CORRECTNESS,
-    RULES_REACT_PEDANTIC,
-    RULES_REACT_PERF,
-    RULES_REACT_RESTRICTION,
-    RULES_REACT_STYLE,
-    RULES_REACT_SUSPICIOUS,
-} from "#/consts/rules/react";
+} from "#/presets/common/rules/oxc";
 export {
     RULES_TYPESCRIPT,
     RULES_TYPESCRIPT_NURSERY,
@@ -49,9 +29,11 @@ export {
     RULES_TYPESCRIPT_RESTRICTION,
     RULES_TYPESCRIPT_STYLE,
     RULES_TYPESCRIPT_SUSPICIOUS,
-} from "#/consts/rules/typescript";
+} from "#/presets/common/rules/typescript";
 export {
     RULES_UNICORN,
     RULES_UNICORN_PEDANTIC,
     RULES_UNICORN_RESTRICTION,
-} from "#/consts/rules/unicorn";
+    RULES_UNICORN_STYLE,
+    RULES_UNICORN_SUSPICIOUS,
+} from "#/presets/common/rules/unicorn";
