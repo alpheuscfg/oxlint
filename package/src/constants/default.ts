@@ -3,7 +3,7 @@ import type { OxlintConfig } from "oxlint";
 import { IGNORE_PATTERNS_DEFAULT } from "#/constants/ignore-patterns";
 
 /**
- * Default config for `oxlint`.
+ * Default config for Oxlint.
  */
 const CONFIG_DEFAULT = {
     ignorePatterns: IGNORE_PATTERNS_DEFAULT,
