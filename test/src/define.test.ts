@@ -41,4 +41,18 @@ describe("defineConfig test", (): void => {
             ],
         });
     });
+
+    it("should not affect later calls after overriding a previous config", (): void => {
+        const previousConfig: OxlintConfig = {
+            ignorePatterns: [
+                "custom/**",
+            ],
+        };
+
+        defineConfig(previousConfig);
+
+        const config: OxlintConfig = defineConfig();
+
+        expect(config).toEqual(CONFIG_DEFAULT);
+    });
 });
