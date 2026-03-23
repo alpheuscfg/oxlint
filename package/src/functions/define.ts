@@ -46,6 +46,8 @@ function defineConfig(presets?: Preset[]): OxlintConfig;
 
 /**
  * Define Oxlint configuration.
+ * 
+ * All arrays will not be merged, adding new values will replace existing values.
  *
  * ### Example
  *
@@ -66,7 +68,7 @@ function defineConfig(presets?: Preset[]): OxlintConfig;
  * ]);
  * ```
  */
-function defineConfig(options?: OxlintConfig, presets?: Preset[]): OxlintConfig;
+function defineConfig(config?: OxlintConfig, presets?: Preset[]): OxlintConfig;
 
 function defineConfig(
     presetsOrConfig?: Preset[] | OxlintConfig,
