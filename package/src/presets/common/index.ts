@@ -23,6 +23,14 @@ export {
     RULES_OXC_RESTRICTION,
 } from "#/presets/common/rules/oxc";
 export {
+    RULES_PROMISE,
+    RULES_PROMISE_CORRECTNESS,
+    RULES_PROMISE_NURSERY,
+    RULES_PROMISE_RESTRICTION,
+    RULES_PROMISE_STYLE,
+    RULES_PROMISE_SUSPICIOUS,
+} from "#/presets/common/rules/promise";
+export {
     RULES_TYPESCRIPT,
     RULES_TYPESCRIPT_NURSERY,
     RULES_TYPESCRIPT_PEDANTIC,
