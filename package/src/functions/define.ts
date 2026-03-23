@@ -2,7 +2,7 @@ import type { OxlintConfig } from "oxlint";
 
 import type { Preset, PresetResult } from "#/@types/preset";
 
-import { toMerged } from "es-toolkit";
+import { clone, toMerged } from "es-toolkit";
 
 import { CONFIG_DEFAULT } from "#/constants/default";
 import { mergeConfig } from "#/functions/merge";
@@ -11,7 +11,7 @@ const defineConfigFn = (
     userConfig?: OxlintConfig,
     presets?: Preset[],
 ): OxlintConfig => {
-    let config: OxlintConfig = mergeConfig(CONFIG_DEFAULT, userConfig);
+    let config: OxlintConfig = mergeConfig(clone(CONFIG_DEFAULT), userConfig);
 
     if (!presets) return config;
 
