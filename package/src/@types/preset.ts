@@ -14,6 +14,9 @@ type PresetContext = {
  * Preset result.
  */
 type PresetResult = {
+    /**
+     * Oxlint configuration.
+     */
     config: OxlintConfig;
 };
 
