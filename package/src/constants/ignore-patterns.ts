@@ -4,6 +4,8 @@ const IGNORE_PATTERNS_DEFAULT = [
     // macOS
     "**/__MACOSX/**",
     "**/.DS_Store",
+    // agents
+    ".agents/skills/**",
     // node modules
     "**/node_modules/**",
     // build
