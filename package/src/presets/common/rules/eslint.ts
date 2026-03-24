@@ -135,7 +135,7 @@ const RULES_ESLINT_SUSPICIOUS = {
         "error",
         {
             builtinGlobals: true,
-            host: "all",
+            hoist: "all",
             ignoreFunctionTypeParameterNameValueShadow: false,
             ignoreOnInitialization: false,
             ignoreTypeValueShadow: false,
