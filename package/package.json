@@ -46,29 +46,29 @@
             "require": "./dist/presets/common/index.js"
         },
         "./presets/node": {
-            "types": "./dist/presets/common/index.d.ts",
-            "import": "./dist/presets/common/index.mjs",
-            "require": "./dist/presets/common/index.js"
+            "types": "./dist/presets/node/index.d.ts",
+            "import": "./dist/presets/node/index.mjs",
+            "require": "./dist/presets/node/index.js"
         },
         "./presets/jsx": {
-            "types": "./dist/presets/common/index.d.ts",
-            "import": "./dist/presets/common/index.mjs",
-            "require": "./dist/presets/common/index.js"
+            "types": "./dist/presets/jsx/index.d.ts",
+            "import": "./dist/presets/jsx/index.mjs",
+            "require": "./dist/presets/jsx/index.js"
         },
         "./presets/react": {
-            "types": "./dist/presets/common/index.d.ts",
-            "import": "./dist/presets/common/index.mjs",
-            "require": "./dist/presets/common/index.js"
+            "types": "./dist/presets/react/index.d.ts",
+            "import": "./dist/presets/react/index.mjs",
+            "require": "./dist/presets/react/index.js"
         },
         "./presets/next": {
-            "types": "./dist/presets/common/index.d.ts",
-            "import": "./dist/presets/common/index.mjs",
-            "require": "./dist/presets/common/index.js"
+            "types": "./dist/presets/next/index.d.ts",
+            "import": "./dist/presets/next/index.mjs",
+            "require": "./dist/presets/next/index.js"
         },
         "./presets/vitest": {
-            "types": "./dist/presets/common/index.d.ts",
-            "import": "./dist/presets/common/index.mjs",
-            "require": "./dist/presets/common/index.js"
+            "types": "./dist/presets/vitest/index.d.ts",
+            "import": "./dist/presets/vitest/index.mjs",
+            "require": "./dist/presets/vitest/index.js"
         },
         "./package.json": "./package.json"
     },
