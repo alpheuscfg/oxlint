@@ -2,12 +2,6 @@ import type { LintRules } from "#/@types/oxlint";
 
 const RULES_ESLINT_NURSERY = {
     "getter-return": "error",
-    "no-undef": [
-        "error",
-        {
-            typeof: true,
-        },
-    ],
     "no-unreachable": "error",
 } as const satisfies LintRules;
 
@@ -56,36 +50,23 @@ const RULES_ESLINT_PERF = {
 
 const RULES_ESLINT_RESTRICTION = {
     "no-div-regex": "error",
-    "no-param-reassign": [
-        "error",
-        {
-            props: true,
-        },
-    ],
     "no-undefined": "error",
     "no-use-before-define": [
         "error",
         {
-            allowNamedExports: false,
+            allowNamedExports: true,
             classes: true,
             enums: true,
-            functions: true,
+            functions: false,
             ignoreTypeReferences: true,
             typedefs: true,
-            variables: true,
+            variables: false,
         },
     ],
     "no-var": "error",
 } as const satisfies LintRules;
 
 const RULES_ESLINT_STYLE = {
-    "arrow-body-style": [
-        "error",
-        "as-needed",
-        {
-            requireReturnForObjectLiteral: false,
-        },
-    ],
     "default-case-last": "error",
     "grouped-accessor-pairs": [
         "error",
@@ -134,7 +115,7 @@ const RULES_ESLINT_SUSPICIOUS = {
     "no-shadow": [
         "error",
         {
-            builtinGlobals: true,
+            builtinGlobals: false,
             hoist: "all",
             ignoreFunctionTypeParameterNameValueShadow: false,
             ignoreOnInitialization: false,

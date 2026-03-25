@@ -44,12 +44,6 @@ const RULES_UNICORN_STYLE = {
     "unicorn/empty-brace-spaces": "error",
     "unicorn/error-message": "error",
     "unicorn/no-array-method-this-argument": "error",
-    "unicorn/no-null": [
-        "error",
-        {
-            checkStrictEquality: true,
-        },
-    ],
     "unicorn/no-unreadable-array-destructuring": "error",
     "unicorn/no-useless-collection-argument": "error",
     "unicorn/numeric-separators-style": [

@@ -18,6 +18,10 @@ const RULES_IMPORT_RESTRICTION = {
             // source
             js: "never",
             ts: "never",
+            mjs: "never",
+            mts: "never",
+            cjs: "never",
+            cts: "never",
             jsx: "never",
             tsx: "never",
             // configurations
@@ -33,9 +37,7 @@ const RULES_IMPORT_STYLE = {
         "error",
         "prefer-top-level",
     ],
-    "import/exports-last": "error",
     "import/first": "error",
-    "import/group-exports": "error",
     "import/no-duplicates": [
         "error",
         {
