@@ -2,11 +2,14 @@ packages:
     - ./package
     - ./test
 
+allowBuilds:
+    esbuild: false
+
 catalogs:
     dev:
-        "oxlint": 1.56.0
+        "oxlint": 1.45.0
     peer:
-        "oxlint": ^1.56.0
+        "oxlint": ^1.45.0
 
 minimumReleaseAge: 1440
 
