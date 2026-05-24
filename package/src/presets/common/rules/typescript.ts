@@ -204,8 +204,7 @@ const RULES_TYPESCRIPT_STYLE = {
         },
     ],
     "typescript/prefer-function-type": "error",
-    "typescript/prefer-reduce-type-parametertypescript/prefer-reduce-type-parameter":
-        "error",
+    "typescript/prefer-reduce-type-parameter": "error",
     "typescript/prefer-return-this-type": "error",
 } as const satisfies LintRules;
 
