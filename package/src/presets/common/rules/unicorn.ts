@@ -103,11 +103,7 @@ const RULES_UNICORN_SUSPICIOUS = {
         },
     ],
     "unicorn/no-instanceof-builtins": [
-        "error",
-        {
-            strategy: "strict",
-            useErrorIsError: false,
-        },
+        "allow",
     ],
 } as const satisfies LintRules;
 
