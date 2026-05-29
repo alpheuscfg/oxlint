@@ -8,6 +8,7 @@ import {
     RULES_IMPORT,
     RULES_OXC,
     RULES_PROMISE,
+    RULES_STYLISTIC,
     RULES_TYPESCRIPT,
     RULES_UNICORN,
 } from "@apst/oxlint/presets/common";
@@ -29,6 +30,7 @@ describe("defineConfig with presets test", (): void => {
             ...RULES_OXC,
             ...RULES_IMPORT,
             ...RULES_PROMISE,
+            ...RULES_STYLISTIC,
         });
     });
 
@@ -61,6 +63,7 @@ describe("defineConfig with presets test", (): void => {
             ...RULES_OXC,
             ...RULES_IMPORT,
             ...RULES_PROMISE,
+            ...RULES_STYLISTIC,
         });
     });
 });
