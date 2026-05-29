@@ -9,8 +9,4 @@ const PLUGIN_COMMON = [
     "promise",
 ] as const satisfies LintPlugins;
 
-const PLUGIN_JS_COMMON = [
-    "@stylistic/eslint-plugin",
-] as const;
-
-export { PLUGIN_COMMON, PLUGIN_JS_COMMON };
+export { PLUGIN_COMMON };

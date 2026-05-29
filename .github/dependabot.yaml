@@ -13,7 +13,6 @@ updates:
       commit-message:
           prefix: "chore"
       ignore:
-          - dependency-name: "@stylistic/eslint-plugin"
           - dependency-name: "es-toolkit"
           - dependency-name: "ts-vista"
           - dependency-name: "oxlint"

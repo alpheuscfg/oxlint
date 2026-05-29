@@ -1,4 +1,4 @@
-export { PLUGIN_COMMON, PLUGIN_JS_COMMON } from "#/presets/common/plugin";
+export { PLUGIN_COMMON } from "#/presets/common/plugin";
 export { commonPreset } from "#/presets/common/preset";
 export {
     RULES_ESLINT,
@@ -30,7 +30,6 @@ export {
     RULES_PROMISE_STYLE,
     RULES_PROMISE_SUSPICIOUS,
 } from "#/presets/common/rules/promise";
-export { RULES_STYLISTIC } from "#/presets/common/rules/stylistic";
 export {
     RULES_TYPESCRIPT,
     RULES_TYPESCRIPT_NURSERY,
