@@ -186,7 +186,7 @@ const RULES_TYPESCRIPT_STYLE = {
     "typescript/consistent-type-imports": [
         "error",
         {
-            disallowTypeImports: true,
+            disallowTypeAnnotations: true,
             fixStyle: "separate-type-imports",
             prefer: "type-imports",
         },
