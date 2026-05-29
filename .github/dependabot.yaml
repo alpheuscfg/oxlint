@@ -14,5 +14,4 @@ updates:
           prefix: "chore"
       ignore:
           - dependency-name: "es-toolkit"
-          - dependency-name: "ts-vista"
           - dependency-name: "oxlint"

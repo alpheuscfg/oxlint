@@ -79,8 +79,7 @@
         "dist"
     ],
     "dependencies": {
-        "es-toolkit": "^1.40.0",
-        "ts-vista": "~0.2.3"
+        "es-toolkit": "^1.40.0"
     },
     "devDependencies": {
         "oxlint": "catalog:dev"

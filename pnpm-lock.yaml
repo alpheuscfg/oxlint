@@ -38,9 +38,6 @@ importers:
       es-toolkit:
         specifier: ^1.40.0
         version: 1.45.1
-      ts-vista:
-        specifier: ~0.2.3
-        version: 0.2.3
     devDependencies:
       oxlint:
         specifier: catalog:dev
@@ -1002,9 +999,6 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
-  ts-vista@0.2.3:
-    resolution: {integrity: sha512-aXdjXqE2ReXVauZTVDfA4Dl5StYID/kS9Z+uUBLJIhdU2oNQC/A33aMj9zeVJCd3fn0UtT8Wj+PAMCRASirkwg==}
-
   tsconfck@3.1.6:
     resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
     engines: {node: ^18 || >=20}
@@ -1831,8 +1825,6 @@ snapshots:
   tinyrainbow@3.1.0: {}
 
   tree-kill@1.2.2: {}
-
-  ts-vista@0.2.3: {}
 
   tsconfck@3.1.6(typescript@6.0.3):
     optionalDependencies:
