@@ -2,6 +2,9 @@ packages:
     - ./package
     - ./test
 
+autoInstallPeers: false
+strictPeerDependencies: false
+
 allowBuilds:
     esbuild: false
 
