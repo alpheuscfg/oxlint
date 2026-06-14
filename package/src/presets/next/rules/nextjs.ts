@@ -14,6 +14,7 @@ const RULES_NEXTJS_CORRECTNESS = {
     "nextjs/no-head-element": "error",
     "nextjs/no-head-import-in-document": "error",
     "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-img-element": "allow",
     "nextjs/no-page-custom-font": "error",
     "nextjs/no-script-component-in-head": "error",
     "nextjs/no-styled-jsx-in-document": "error",

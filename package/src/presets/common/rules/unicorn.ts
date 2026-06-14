@@ -1,5 +1,9 @@
 import type { LintRules } from "#/@types/oxlint";
 
+const RULES_UNICORN_NURSERY = {
+    "unicorn/no-useless-iterator-to-array": "error",
+} as const satisfies LintRules;
+
 const RULES_UNICORN_PEDANTIC = {
     "unicorn/consistent-empty-array-spread": "error",
     "unicorn/explicit-length-check": [
@@ -41,6 +45,8 @@ const RULES_UNICORN_RESTRICTION = {
 const RULES_UNICORN_STYLE = {
     "unicorn/consistent-date-clone": "error",
     "unicorn/consistent-existence-index-check": "error",
+    "unicorn/consistent-template-literal-escape": "error",
+    "unicorn/custom-error-definition": "error",
     "unicorn/empty-brace-spaces": "error",
     "unicorn/error-message": "error",
     "unicorn/no-array-method-this-argument": "error",
@@ -83,6 +89,7 @@ const RULES_UNICORN_STYLE = {
     ],
     "unicorn/require-module-attributes": "error",
     "unicorn/switch-case-braces": "error",
+    "unicorn/switch-case-break-position": "error",
     "unicorn/text-encoding-identifier-case": [
         "error",
         {
@@ -108,6 +115,7 @@ const RULES_UNICORN_SUSPICIOUS = {
 } as const satisfies LintRules;
 
 const RULES_UNICORN = {
+    ...RULES_UNICORN_NURSERY,
     ...RULES_UNICORN_PEDANTIC,
     ...RULES_UNICORN_RESTRICTION,
     ...RULES_UNICORN_STYLE,
@@ -116,6 +124,7 @@ const RULES_UNICORN = {
 
 export {
     RULES_UNICORN,
+    RULES_UNICORN_NURSERY,
     RULES_UNICORN_PEDANTIC,
     RULES_UNICORN_RESTRICTION,
     RULES_UNICORN_STYLE,

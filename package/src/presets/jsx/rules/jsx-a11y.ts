@@ -11,9 +11,29 @@ const RULES_JSX_A11Y_CORRECTNESS = {
     "jsx-a11y/heading-has-content": "error",
     "jsx-a11y/html-has-lang": "error",
     "jsx-a11y/iframe-has-title": "error",
+    "jsx-a11y/interactive-supports-focus": "error",
     "jsx-a11y/lang": "error",
     "jsx-a11y/mouse-events-have-key-events": "error",
     "jsx-a11y/no-aria-hidden-on-focusable": "error",
+    "jsx-a11y/no-interactive-element-to-noninteractive-role": "error",
+    "jsx-a11y/no-noninteractive-element-interactions": "error",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "error",
+    "jsx-a11y/no-static-element-interactions": [
+        "error",
+        {
+            allowExpressionValues: true,
+            handlers: [
+                "onClick",
+                // key
+                "onKeyPress",
+                "onKeyDown",
+                "onKeyUp",
+                // mouse
+                "onMouseDown",
+                "onMouseUp",
+            ],
+        },
+    ],
     "jsx-a11y/prefer-tag-over-role": "error",
     "jsx-a11y/tabindex-no-positive": "error",
 } as const satisfies LintRules;

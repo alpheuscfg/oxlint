@@ -38,6 +38,14 @@ const RULES_IMPORT_STYLE = {
         "prefer-top-level",
     ],
     "import/first": "error",
+    "import/newline-after-import": [
+        "error",
+        {
+            considerComments: true,
+            count: 1,
+            exactCount: true,
+        },
+    ],
     "import/no-duplicates": [
         "error",
         {

@@ -1,8 +1,7 @@
 import type { LintRules } from "#/@types/oxlint";
 
 const RULES_ESLINT_NURSERY = {
-    "getter-return": "error",
-    "no-unreachable": "error",
+    "no-useless-assignment": "error",
 } as const satisfies LintRules;
 
 const RULES_ESLINT_PEDANTIC = {
@@ -68,6 +67,10 @@ const RULES_ESLINT_RESTRICTION = {
 
 const RULES_ESLINT_STYLE = {
     "default-case-last": "error",
+    "func-name-matching": [
+        "error",
+        "always",
+    ],
     "grouped-accessor-pairs": [
         "error",
         "getBeforeSet",
@@ -112,6 +115,8 @@ const RULES_ESLINT_STYLE = {
 const RULES_ESLINT_SUSPICIOUS = {
     "block-scoped-var": "error",
     "no-extend-native": "error",
+    "no-implied-eval": "error",
+    "no-unmodified-loop-condition": "error",
     "no-shadow": [
         "error",
         {

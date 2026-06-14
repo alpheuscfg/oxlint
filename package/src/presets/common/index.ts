@@ -40,6 +40,7 @@ export {
 } from "#/presets/common/rules/typescript";
 export {
     RULES_UNICORN,
+    RULES_UNICORN_NURSERY,
     RULES_UNICORN_PEDANTIC,
     RULES_UNICORN_RESTRICTION,
     RULES_UNICORN_STYLE,

@@ -30,6 +30,8 @@ const RULES_VITEST_STYLE = {
             fixable: true,
         },
     ],
+    "vitest/prefer-importing-vitest-globals": "error",
+    "vitest/prefer-strict-boolean-matchers": "error",
 } as const satisfies LintRules;
 
 const RULES_VITEST = {

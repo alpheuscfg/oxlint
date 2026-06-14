@@ -1,3 +1,7 @@
+/**
+ * No lint rules have been configured for class components.
+ */
+
 import type { LintRules } from "#/@types/oxlint";
 
 const RULES_REACT_CORRECTNESS = {
@@ -70,6 +74,13 @@ const RULES_REACT_RESTRICTION = {
         },
     ],
     "react/no-react-children": "error",
+    "react/prefer-function-component": [
+        "error",
+        {
+            allowErrorBoundary: true,
+            allowJsxUtilityClass: true,
+        },
+    ],
 } as const satisfies LintRules;
 
 const RULES_REACT_STYLE = {
@@ -106,6 +117,12 @@ const RULES_REACT_SUSPICIOUS = {
     "react/iframe-missing-sandbox": "error",
     "react/jsx-no-comment-textnodes": "error",
     "react/no-namespace": "error",
+    "react/no-unstable-nested-components": [
+        "error",
+        {
+            allowAsProps: true,
+        },
+    ],
 } as const satisfies LintRules;
 
 const RULES_REACT = {

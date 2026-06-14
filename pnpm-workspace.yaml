@@ -10,9 +10,9 @@ allowBuilds:
 
 catalogs:
     dev:
-        "oxlint": 1.45.0
+        "oxlint": 1.68.0
     peer:
-        "oxlint": ^1.45.0
+        "oxlint": ^1.68.0
 
 minimumReleaseAge: 1440
 

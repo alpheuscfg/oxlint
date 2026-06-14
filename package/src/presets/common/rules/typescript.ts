@@ -1,30 +1,13 @@
 import type { LintRules } from "#/@types/oxlint";
 
 const RULES_TYPESCRIPT_NURSERY = {
-    "typescript/consistent-return": [
+    "typescript/no-unnecessary-condition": [
         "error",
         {
-            treatUndefinedAsUnspecified: false,
+            allowConstantLoopConditions: true,
+            checkTypePredicates: true,
         },
     ],
-    "typescript/consistent-type-exports": [
-        "error",
-        {
-            fixMixedExportsWithInlineTypeSpecifier: false,
-        },
-    ],
-    "typescript/dot-notation": [
-        "error",
-        {
-            allowIndexSignaturePropertyAccess: false,
-            allowKeywords: true,
-            allowPrivateClassPropertyAccess: false,
-            allowProtectedClassPropertyAccess: false,
-        },
-    ],
-    "typescript/no-unnecessary-type-conversion": "error",
-    "typescript/no-unnecessary-type-parameters": "error",
-    "typescript/no-useless-default-assignment": "error",
     "typescript/prefer-optional-chain": [
         "error",
         {
@@ -36,19 +19,6 @@ const RULES_TYPESCRIPT_NURSERY = {
             checkString: true,
             checkUnknown: true,
             requireNullish: false,
-        },
-    ],
-    "typescript/prefer-readonly": [
-        "error",
-        {
-            onlyInlineLambdas: false,
-        },
-    ],
-    "typescript/prefer-regexp-exec": "error",
-    "typescript/strict-void-return": [
-        "error",
-        {
-            allowReturnAny: false,
         },
     ],
 } as const satisfies LintRules;
@@ -131,6 +101,12 @@ const RULES_TYPESCRIPT_PEDANTIC = {
             allowString: true,
         },
     ],
+    "typescript/strict-void-return": [
+        "error",
+        {
+            allowReturnAny: false,
+        },
+    ],
     "typescript/switch-exhaustiveness-check": [
         "error",
         {
@@ -142,6 +118,12 @@ const RULES_TYPESCRIPT_PEDANTIC = {
 } as const satisfies LintRules;
 
 const RULES_TYPESCRIPT_RESTRICTION = {
+    "typescript/explicit-member-accessibility": [
+        "error",
+        {
+            accessibility: "explicit",
+        },
+    ],
     "typescript/no-empty-object-type": [
         "error",
         {
@@ -183,6 +165,12 @@ const RULES_TYPESCRIPT_STYLE = {
         "error",
         "type",
     ],
+    "typescript/consistent-type-exports": [
+        "error",
+        {
+            fixMixedExportsWithInlineTypeSpecifier: false,
+        },
+    ],
     "typescript/consistent-type-imports": [
         "error",
         {
@@ -190,6 +178,19 @@ const RULES_TYPESCRIPT_STYLE = {
             fixStyle: "separate-type-imports",
             prefer: "type-imports",
         },
+    ],
+    "typescript/dot-notation": [
+        "error",
+        {
+            allowIndexSignaturePropertyAccess: false,
+            allowKeywords: true,
+            allowPrivateClassPropertyAccess: false,
+            allowProtectedClassPropertyAccess: false,
+        },
+    ],
+    "typescript/method-signature-style": [
+        "error",
+        "property",
     ],
     "typescript/no-empty-interface": [
         "error",
@@ -205,13 +206,28 @@ const RULES_TYPESCRIPT_STYLE = {
     ],
     "typescript/prefer-function-type": "error",
     "typescript/prefer-reduce-type-parameter": "error",
+    "typescript/prefer-readonly": [
+        "error",
+        {
+            onlyInlineLambdas: false,
+        },
+    ],
+    "typescript/prefer-regexp-exec": "error",
     "typescript/prefer-return-this-type": "error",
 } as const satisfies LintRules;
 
 const RULES_TYPESCRIPT_SUSPICIOUS = {
+    "typescript/consistent-return": [
+        "error",
+        {
+            treatUndefinedAsUnspecified: false,
+        },
+    ],
     "typescript/no-confusing-non-null-assertion": "error",
     "typescript/no-unnecessary-template-expression": "error",
     "typescript/no-unnecessary-type-constraint": "error",
+    "typescript/no-unnecessary-type-conversion": "error",
+    "typescript/no-unnecessary-type-parameters": "error",
     "typescript/no-unsafe-enum-comparison": "error",
 } as const satisfies LintRules;
 
