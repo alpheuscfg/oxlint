@@ -22,10 +22,21 @@ const mergeUserConfig = <
     );
 };
 
-const dedupe = <T>(values: readonly T[]): T[] =>
-    values.filter(
-        (value: T, index: number): boolean => values.indexOf(value) === index,
-    );
+const dedupe = <T>(values: readonly T[]): T[] => {
+    const seen: Set<T> = new Set();
+
+    const result: T[] = [];
+
+    for (const value of values) {
+        if (seen.has(value)) continue;
+
+        seen.add(value);
+
+        result.push(value);
+    }
+
+    return result;
+};
 
 const mergePresetConfig = <
     T extends Record<PropertyKey, any>,
