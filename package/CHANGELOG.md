@@ -1,3 +1,9 @@
+## Next
+
+### What's New
+
+- export `RULES_NEXTJS` from `@apst/oxlint/presets/next`
+
 ## 0.3.0 (2026-06-14)
 
 ### Breaking Changes
