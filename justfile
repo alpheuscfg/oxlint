@@ -92,7 +92,7 @@ clean-macos:
 
 # Clean builds (Windows)
 clean-windows:
-    Remove-Item -Recurse -Force ./{{pkg}}/dist
+    if (Test-Path "./{{pkg}}/dist") { Remove-Item -Recurse -Force "./{{pkg}}/dist" }
 
 # Clean builds
 clean:
@@ -114,9 +114,9 @@ clean-all-macos:
 clean-all-windows:
     just clean
 
-    Remove-Item -Recurse -Force ./{{pkg}}/node_modules
+    if (Test-Path "./{{pkg}}/node_modules") { Remove-Item -Recurse -Force "./{{pkg}}/node_modules" }
 
-    Remove-Item -Recurse -Force ./node_modules
+    if (Test-Path "./node_modules") { Remove-Item -Recurse -Force "./node_modules" }
 
 # Clean everything
 clean-all:
