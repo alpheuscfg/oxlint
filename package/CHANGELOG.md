@@ -4,6 +4,11 @@
 
 - export `RULES_NEXTJS` from `@apst/oxlint/presets/next`
 
+### What's Changed
+
+- fix plugins being replaced instead of accumulated when composing multiple presets
+- remove redundant double-merge performed by built-in presets
+
 ## 0.3.0 (2026-06-14)
 
 ### Breaking Changes

@@ -1,24 +1,19 @@
-import type { OxlintConfig } from "oxlint";
-
 import type { Preset, PresetResult } from "#/@types/preset";
 
-import { mergePresetConfig } from "#/functions/merge";
 import { PLUGIN_VITEST } from "#/presets/vitest/plugin";
 import { RULES_VITEST } from "#/presets/vitest/rules/vitest";
 
 const vitestPreset = (): Preset => {
-    return ({ config: internalConfig }): PresetResult => {
-        const config: OxlintConfig = mergePresetConfig(internalConfig, {
-            plugins: [
-                ...PLUGIN_VITEST,
-            ],
-            rules: {
-                ...RULES_VITEST,
-            },
-        } satisfies OxlintConfig);
-
+    return (): PresetResult => {
         return {
-            config,
+            config: {
+                plugins: [
+                    ...PLUGIN_VITEST,
+                ],
+                rules: {
+                    ...RULES_VITEST,
+                },
+            },
         };
     };
 };
