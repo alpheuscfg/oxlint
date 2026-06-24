@@ -31,6 +31,10 @@ const RULES_REACT_CORRECTNESS = {
     "react/void-dom-elements-no-children": "error",
 } as const satisfies LintRules;
 
+const RULES_REACT_NURSERY = {
+    "react/react-compiler": "error",
+} as const satisfies LintRules;
+
 const RULES_REACT_PEDANTIC = {
     "react/checked-requires-onchange-or-readonly": [
         "error",
@@ -71,6 +75,14 @@ const RULES_REACT_RESTRICTION = {
             button: true,
             reset: true,
             submit: true,
+        },
+    ],
+    "react/jsx-no-literals": [
+        "error",
+        {
+            ignoreProps: false,
+            noAttributeStrings: true,
+            noStrings: false,
         },
     ],
     "react/no-react-children": "error",
@@ -127,6 +139,7 @@ const RULES_REACT_SUSPICIOUS = {
 
 const RULES_REACT = {
     ...RULES_REACT_CORRECTNESS,
+    ...RULES_REACT_NURSERY,
     ...RULES_REACT_PEDANTIC,
     ...RULES_REACT_PERF,
     ...RULES_REACT_RESTRICTION,
@@ -137,6 +150,7 @@ const RULES_REACT = {
 export {
     RULES_REACT,
     RULES_REACT_CORRECTNESS,
+    RULES_REACT_NURSERY,
     RULES_REACT_PEDANTIC,
     RULES_REACT_PERF,
     RULES_REACT_RESTRICTION,

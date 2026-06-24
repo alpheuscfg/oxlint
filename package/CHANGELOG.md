@@ -1,7 +1,13 @@
 ## Next
 
+### Breaking Changes
+
+- update `oxlint` supported version range to `^1.70.0`
+
 ### What's New
 
+- add support for `react/react-compiler`
+- add support for `react/jsx-no-literals`
 - export `RULES_NEXTJS` from `@apst/oxlint/presets/next`
 
 ### What's Changed
@@ -13,7 +19,7 @@
 
 ### Breaking Changes
 
-- set minimum supported oxlint version to `^1.68.0`
+- update `oxlint` supported version range to `^1.68.0`
 
 ### What's New
 
