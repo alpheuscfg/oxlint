@@ -1,6 +1,6 @@
 import { mergeWith } from "es-toolkit";
 
-const mergeConfig = <
+const mergeUserConfig = <
     T extends Record<PropertyKey, any>,
     S extends Record<PropertyKey, any>,
 >(
@@ -9,12 +9,47 @@ const mergeConfig = <
 ): T & S => {
     if (!source) return target;
 
-    return mergeWith(target, source, (_: unknown, target: unknown): unknown => {
-        // array replacement
-        if (Array.isArray(target)) return target;
-        // default deep merge
-        return void 0;
-    });
+    return mergeWith(
+        target,
+        source,
+        (_: unknown, sourceValue: unknown): unknown => {
+            // array replacement
+            if (Array.isArray(sourceValue)) return sourceValue;
+
+            // default deep merge
+            return void 0;
+        },
+    );
 };
 
-export { mergeConfig };
+const dedupe = <T>(values: readonly T[]): T[] =>
+    values.filter(
+        (value: T, index: number): boolean => values.indexOf(value) === index,
+    );
+
+const mergePresetConfig = <
+    T extends Record<PropertyKey, any>,
+    S extends Record<PropertyKey, any>,
+>(
+    target: T,
+    source: S,
+): T & S => {
+    return mergeWith(
+        target,
+        source,
+        (targetValue: unknown, sourceValue: unknown): unknown => {
+            // array concatenation with deduplication
+            if (Array.isArray(targetValue) && Array.isArray(sourceValue)) {
+                return dedupe([
+                    ...targetValue,
+                    ...sourceValue,
+                ]);
+            }
+
+            // default deep merge
+            return void 0;
+        },
+    );
+};
+
+export { mergePresetConfig, mergeUserConfig };

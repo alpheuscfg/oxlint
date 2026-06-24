@@ -2,8 +2,7 @@ import type { OxlintConfig } from "oxlint";
 
 import type { Preset, PresetResult } from "#/@types/preset";
 
-import { toMerged } from "es-toolkit";
-
+import { mergePresetConfig } from "#/functions/merge";
 import { PLUGIN_COMMON } from "#/presets/common/plugin";
 import { RULES_ESLINT } from "#/presets/common/rules/eslint";
 import { RULES_IMPORT } from "#/presets/common/rules/import";
@@ -14,7 +13,7 @@ import { RULES_UNICORN } from "#/presets/common/rules/unicorn";
 
 const commonPreset = (): Preset => {
     return ({ config: internalConfig }): PresetResult => {
-        const config: OxlintConfig = toMerged(internalConfig, {
+        const config: OxlintConfig = mergePresetConfig(internalConfig, {
             plugins: [
                 ...PLUGIN_COMMON,
             ],
