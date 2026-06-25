@@ -6,6 +6,7 @@
 
 ### What's New
 
+- add Vue preset
 - add support for `react/react-compiler`
 - add support for `react/jsx-no-literals`
 - export `RULES_NEXTJS` from `@apst/oxlint/presets/next`
