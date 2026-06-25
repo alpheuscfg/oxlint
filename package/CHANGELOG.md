@@ -17,6 +17,7 @@
 
 - update default ignore patterns
 - fix plugins being replaced instead of accumulated when composing multiple presets
+- disable `unicorn/no-instanceof-builtins`
 - remove redundant double-merge performed by built-in presets
 
 ## 0.3.0 (2026-06-14)

@@ -109,9 +109,6 @@ const RULES_UNICORN_SUSPICIOUS = {
             allowExpressionStatement: true,
         },
     ],
-    "unicorn/no-instanceof-builtins": [
-        "allow",
-    ],
 } as const satisfies LintRules;
 
 const RULES_UNICORN = {
