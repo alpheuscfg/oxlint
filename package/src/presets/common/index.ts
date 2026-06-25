@@ -21,6 +21,7 @@ export {
     RULES_OXC,
     RULES_OXC_NURSERY,
     RULES_OXC_RESTRICTION,
+    RULES_OXC_SUSPICIOUS,
 } from "#/presets/common/rules/oxc";
 export {
     RULES_PROMISE,

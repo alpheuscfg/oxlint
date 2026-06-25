@@ -9,6 +9,7 @@
 - add Vue preset
 - add support for `react/react-compiler`
 - add support for `react/jsx-no-literals`
+- export `RULES_OXC_SUSPICIOUS` from `@apst/oxlint/presets/common`
 - export `RULES_NEXTJS` from `@apst/oxlint/presets/next`
 
 ### What's Changed

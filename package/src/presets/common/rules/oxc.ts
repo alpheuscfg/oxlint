@@ -20,4 +20,9 @@ const RULES_OXC = {
     ...RULES_OXC_SUSPICIOUS,
 } as const satisfies LintRules;
 
-export { RULES_OXC, RULES_OXC_NURSERY, RULES_OXC_RESTRICTION };
+export {
+    RULES_OXC,
+    RULES_OXC_NURSERY,
+    RULES_OXC_RESTRICTION,
+    RULES_OXC_SUSPICIOUS,
+};
