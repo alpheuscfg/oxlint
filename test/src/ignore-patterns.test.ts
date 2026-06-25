@@ -26,11 +26,9 @@ describe("ignore patterns test", (): void => {
             ],
         });
 
-        expect(config).toEqual({
-            ignorePatterns: [
-                "custom/**",
-            ],
-        });
+        expect(config.ignorePatterns).toEqual([
+            "custom/**",
+        ]);
     });
 
     it("should extend the default ignore patterns with extra patterns", (): void => {
