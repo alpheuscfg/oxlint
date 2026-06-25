@@ -28,4 +28,4 @@ const RULES_NEXTJS = {
     ...RULES_NEXTJS_CORRECTNESS,
 } as const satisfies LintRules;
 
-export { RULES_NEXTJS };
+export { RULES_NEXTJS, RULES_NEXTJS_CORRECTNESS };
