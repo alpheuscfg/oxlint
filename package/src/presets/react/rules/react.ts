@@ -5,8 +5,12 @@
 import type { LintRules } from "#/@types/oxlint";
 
 const RULES_REACT_CORRECTNESS = {
+    "react/error-boundaries": "error",
     "react/exhaustive-deps": "error",
     "react/forward-ref-uses-ref": "error",
+    "react/globals": "error",
+    "react/immutability": "error",
+    "react/incompatible-library": "error",
     "react/jsx-key": [
         "error",
         {
@@ -28,11 +32,16 @@ const RULES_REACT_CORRECTNESS = {
         },
     ],
     "react/no-this-in-sfc": "error",
+    "react/preserve-manual-memoization": "error",
+    "react/purity": "error",
+    "react/refs": "error",
+    "react/set-state-in-effect": "error",
+    "react/set-state-in-render": "error",
+    "react/static-components": "error",
+    "react/use-memo": "error",
+    "react/unsupported-syntax": "error",
     "react/void-dom-elements-no-children": "error",
-} as const satisfies LintRules;
-
-const RULES_REACT_NURSERY = {
-    "react/react-compiler": "error",
+    "react/void-use-memo": "error",
 } as const satisfies LintRules;
 
 const RULES_REACT_PEDANTIC = {
@@ -66,6 +75,7 @@ const RULES_REACT_PEDANTIC = {
 const RULES_REACT_PERF = {
     "react/jsx-no-constructed-context-values": "error",
     "react/no-array-index-key": "error",
+    "react/no-deriving-state-in-effects": "error",
 } as const satisfies LintRules;
 
 const RULES_REACT_RESTRICTION = {
@@ -126,8 +136,12 @@ const RULES_REACT_STYLE = {
 } as const satisfies LintRules;
 
 const RULES_REACT_SUSPICIOUS = {
+    "react/capitalized-calls": "error",
+    "react/exhaustive-effect-dependencies": "error",
+    "react/hooks": "error",
     "react/iframe-missing-sandbox": "error",
     "react/jsx-no-comment-textnodes": "error",
+    "react/memo-dependencies": "error",
     "react/no-namespace": "error",
     "react/no-unstable-nested-components": [
         "error",
@@ -139,7 +153,6 @@ const RULES_REACT_SUSPICIOUS = {
 
 const RULES_REACT = {
     ...RULES_REACT_CORRECTNESS,
-    ...RULES_REACT_NURSERY,
     ...RULES_REACT_PEDANTIC,
     ...RULES_REACT_PERF,
     ...RULES_REACT_RESTRICTION,
@@ -150,7 +163,6 @@ const RULES_REACT = {
 export {
     RULES_REACT,
     RULES_REACT_CORRECTNESS,
-    RULES_REACT_NURSERY,
     RULES_REACT_PEDANTIC,
     RULES_REACT_PERF,
     RULES_REACT_RESTRICTION,

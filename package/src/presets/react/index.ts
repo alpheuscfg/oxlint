@@ -3,7 +3,6 @@ export { reactPreset } from "#/presets/react/preset";
 export {
     RULES_REACT,
     RULES_REACT_CORRECTNESS,
-    RULES_REACT_NURSERY,
     RULES_REACT_PEDANTIC,
     RULES_REACT_PERF,
     RULES_REACT_RESTRICTION,

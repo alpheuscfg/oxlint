@@ -1,3 +1,34 @@
+## Next
+
+### Breaking Changes
+
+- update `oxlint` supported version range to `^1.79.0`
+
+### What's New
+
+- add support for `react/capitalized-calls`
+- add support for `react/error-boundaries`
+- add support for `react/exhaustive-effect-dependencies`
+- add support for `react/globals`
+- add support for `react/immutability`
+- add support for `react/incompatible-library`
+- add support for `react/memo-dependencies`
+- add support for `react/no-derhooksiving-state-in-effects`
+- add support for `react/no-deriving-state-in-effects`
+- add support for `react/preserve-manual-memoization`
+- add support for `react/purity`
+- add support for `react/refs`
+- add support for `react/set-state-in-effect`
+- add support for `react/set-state-in-render`
+- add support for `react/static-components`
+- add support for `react/use-memo`
+- add support for `react/unsupported-syntax`
+- add support for `react/void-use-memo`
+
+### What's Changed
+
+- remove `react/react-compiler` based on the changes in this [Oxlint PR](https://github.com/oxc-project/oxc/pull/25500)
+
 ## 0.4.0 (2026-06-26)
 
 ### Breaking Changes
