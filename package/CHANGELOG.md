@@ -24,6 +24,9 @@
 - add support for `react/use-memo`
 - add support for `react/unsupported-syntax`
 - add support for `react/void-use-memo`
+- add support for `react/invariant` via debug option in React preset
+- add support for `react/syntax` via debug option in React preset
+- add support for `react/todo` via debug option in React preset
 
 ### What's Changed
 

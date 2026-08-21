@@ -5,6 +5,7 @@ import { IGNORE_PATTERNS_DEFAULT } from "@apst/oxlint/constants/ignore-patterns"
 import {
     PLUGIN_REACT,
     RULES_REACT,
+    RULES_REACT_DEBUG,
     reactPreset,
 } from "@apst/oxlint/presets/react";
 import { describe, expect, it } from "vitest";
@@ -42,5 +43,42 @@ describe("react preset test", (): void => {
         });
 
         expect(config.ignorePatterns).toEqual(IGNORE_PATTERNS_DEFAULT);
+    });
+
+    it("should merge the debug rules when debug is true", (): void => {
+        const config: OxlintConfig = defineConfig([
+            reactPreset({
+                debug: true,
+            }),
+        ]);
+
+        expect(config.rules).toEqual({
+            ...RULES_REACT,
+            ...RULES_REACT_DEBUG,
+        });
+    });
+
+    it("should not merge the debug rules when debug is false", (): void => {
+        const config: OxlintConfig = defineConfig([
+            reactPreset({
+                debug: false,
+            }),
+        ]);
+
+        expect(config.rules).toEqual({
+            ...RULES_REACT,
+        });
+    });
+
+    it("should not merge the debug rules when debug is undefined", (): void => {
+        const config: OxlintConfig = defineConfig([
+            reactPreset({
+                debug: void 0,
+            }),
+        ]);
+
+        expect(config.rules).toEqual({
+            ...RULES_REACT,
+        });
     });
 });
