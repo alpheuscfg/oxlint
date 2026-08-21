@@ -6,9 +6,15 @@
 
 ### What's New
 
+- add support for `unicorn/no-array-fill-with-reference-type`
+- add support for `unicorn/no-confusing-array-with`
+- add support for `unicorn/prefer-export-from`
+- add support for `unicorn/prefer-number-coercion`
+- add support for `node/no-mixed-requires`
 - add support for `react/capitalized-calls`
 - add support for `react/error-boundaries`
 - add support for `react/exhaustive-effect-dependencies`
+- add support for `react/function-component-definition`
 - add support for `react/globals`
 - add support for `react/immutability`
 - add support for `react/incompatible-library`
@@ -27,6 +33,7 @@
 - add support for `react/invariant` via debug option in React preset
 - add support for `react/syntax` via debug option in React preset
 - add support for `react/todo` via debug option in React preset
+- add support for `vitest/padding-around-test-blocks`
 
 ### What's Changed
 

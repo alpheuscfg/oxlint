@@ -23,6 +23,7 @@ const RULES_VITEST_STYLE = {
         },
     ],
     "vitest/no-import-node-test": "error",
+    "vitest/padding-around-test-blocks": "error",
     "vitest/prefer-called-times": "error",
     "vitest/prefer-import-in-mock": [
         "error",

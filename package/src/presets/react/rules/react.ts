@@ -106,6 +106,17 @@ const RULES_REACT_RESTRICTION = {
 } as const satisfies LintRules;
 
 const RULES_REACT_STYLE = {
+    "react/function-component-definition": [
+        "error",
+        {
+            namedComponents: [
+                "arrow-function",
+            ],
+            unnamedComponents: [
+                "arrow-function",
+            ],
+        },
+    ],
     "react/jsx-boolean-value": [
         "error",
         "never",

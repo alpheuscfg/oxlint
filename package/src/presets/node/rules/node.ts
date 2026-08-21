@@ -2,6 +2,7 @@ import type { LintRules } from "#/@types/oxlint";
 
 const RULES_NODE_STYLE = {
     "node/no-exports-assign": "error",
+    "node/no-mixed-requires": "error",
 } as const satisfies LintRules;
 
 const RULES_NODE_RESTRICTION = {

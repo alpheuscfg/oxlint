@@ -26,6 +26,7 @@ const RULES_UNICORN_PEDANTIC = {
     ],
     "unicorn/prefer-date-now": "error",
     "unicorn/prefer-math-min-max": "error",
+    "unicorn/prefer-number-coercion": "error",
     "unicorn/prefer-type-error": "error",
     "unicorn/require-number-to-fixed-digits-argument": "error",
 } as const satisfies LintRules;
@@ -76,6 +77,12 @@ const RULES_UNICORN_STYLE = {
     ],
     "unicorn/prefer-classlist-toggle": "error",
     "unicorn/prefer-dom-node-text-content": "error",
+    "unicorn/prefer-export-from": [
+        "error",
+        {
+            checkUsedVariables: true,
+        },
+    ],
     "unicorn/prefer-global-this": "error",
     "unicorn/prefer-includes": "error",
     "unicorn/prefer-keyboard-event-key": "error",
@@ -102,6 +109,7 @@ const RULES_UNICORN_STYLE = {
 const RULES_UNICORN_SUSPICIOUS = {
     "unicorn/consistent-function-scoping": "error",
     "unicorn/no-accessor-recursion": "error",
+    "unicorn/no-array-fill-with-reference-type": "error",
     "unicorn/no-array-reverse": "error",
     "unicorn/no-array-sort": [
         "error",
@@ -109,6 +117,7 @@ const RULES_UNICORN_SUSPICIOUS = {
             allowExpressionStatement: true,
         },
     ],
+    "unicorn/no-confusing-array-with": "error",
 } as const satisfies LintRules;
 
 const RULES_UNICORN = {
