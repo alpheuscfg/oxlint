@@ -1,11 +1,12 @@
 {
     "private": true,
+    "type": "module",
     "dependencies": {
         "@apst/oxlint": "workspace:*",
         "oxlint": "catalog:dev",
         "vitest": "^4.1.11"
     },
     "devDependencies": {
-        "vite-tsconfig-paths": "^6.1.1"
+        "@types/node": "^26.2.0"
     }
 }
