@@ -7,6 +7,6 @@
         "vitest": "^4.1.11"
     },
     "devDependencies": {
-        "@types/node": "^26.2.0"
+        "@types/node": "^26.3.0"
     }
 }
