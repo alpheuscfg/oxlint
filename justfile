@@ -103,6 +103,8 @@ clean:
 clean-all-linux:
     just clean
 
+    rm -rf ./{{tst}}/node_modules
+
     rm -rf ./{{pkg}}/node_modules
 
     rm -rf ./node_modules
@@ -114,6 +116,8 @@ clean-all-macos:
 # Clean everything (Windows)
 clean-all-windows:
     just clean
+
+    if (Test-Path "./{{tst}}/node_modules") { Remove-Item -Recurse -Force "./{{tst}}/node_modules" }
 
     if (Test-Path "./{{pkg}}/node_modules") { Remove-Item -Recurse -Force "./{{pkg}}/node_modules" }
 
